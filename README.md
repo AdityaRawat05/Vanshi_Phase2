@@ -198,6 +198,10 @@ This project is a monorepo containing the Backend (Express), Frontend (React/Vit
 - **Backend**: [Documentation & Setup](./backend/README.md)
 - **Frontend**: [Documentation & Setup](./frontend/README.md)
 - **Contracts**: [Documentation & Setup](./contracts/README.md)
+- **GEE Service**: [Documentation & Setup](./GEE-Service/README.md)
+
+### 🔮 Future Roadmap
+- **Round-2 Improvements**: [Read the full roadmap](./README.nextRound.md)
 
 ### Cloning & Installation
 ```bash
