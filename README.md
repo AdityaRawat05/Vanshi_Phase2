@@ -1,7 +1,10 @@
 # 🌱 VANSHI
 > **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
-Project Domain : Governance 
-( Blockchain + Web + Open Innovation)
+>
+> 🌐 **Live Demo:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
+
+**Project Domain:** Governance
+_(Blockchain + Web + Open Innovation)_
 ## 🔍 Why VANSHI Exists
 
 Climate action today depends heavily on forests — but the responsibility and rewards are deeply unequal.
@@ -50,12 +53,14 @@ However, companies face a different problem: they want to buy carbon credits, bu
 ## 🏗 System Overview (End-to-End Flow)
 
 ![System Architecture](./assets/system_flow.png)
-Blue-Intial mandatory step
-Green-Dashboard Access
-Yellow- Process
-Orange- Block-Chain
-Red-Reject
-Grey-End of project
+
+### Legend
+*   🔵 **Blue**: Initial mandatory step
+*   🟢 **Green**: Dashboard Access
+*   🟡 **Yellow**: Process
+*   🟠 **Orange**: Blockchain
+*   🔴 **Red**: Reject
+*   ⚪ **Grey**: End of project
 
 1.  **Community Forest (Reality)**
     ↓
