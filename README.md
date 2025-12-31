@@ -1,7 +1,5 @@
 # 🌱 VANSHI
 > **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
->
-> 🌐 **Live Demo:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
 
 ## 🔍 Why VANSHI Exists
 
@@ -51,6 +49,12 @@ However, companies face a different problem: they want to buy carbon credits, bu
 ## 🏗 System Overview (End-to-End Flow)
 
 ![System Architecture](./assets/system_flow.png)
+Blue-Intial mandatory step
+Green-Dashboard Access
+Yellow- Process
+Orange- Block-Chain
+Red-Reject
+Grey-End of project
 
 1.  **Community Forest (Reality)**
     ↓
