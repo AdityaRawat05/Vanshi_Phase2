@@ -48,7 +48,7 @@ However, companies face a different problem: they want to buy carbon credits, bu
 
 ## 🏗 System Overview (End-to-End Flow)
 
-![System Architecture](./assets/system_flow.jpg)
+![System Architecture](./assets/system_flow.png)
 
 1.  **Community Forest (Reality)**
     ↓
