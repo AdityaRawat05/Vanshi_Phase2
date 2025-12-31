@@ -4,7 +4,7 @@
 > 🌐 **Live Demo:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
 
 **Project Domain:** Governance
-_(Blockchain + Web + Open Innovation)_
+_(sub domains: Blockchain + Web + Open Innovation)_
 ## 🔍 Why VANSHI Exists
 
 Climate action today depends heavily on forests — but the responsibility and rewards are deeply unequal.
