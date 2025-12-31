@@ -54,13 +54,7 @@ However, companies face a different problem: they want to buy carbon credits, bu
 
 ![System Architecture](./assets/system_flow.png)
 
-### Legend
-*   🔵 **Blue**: Initial mandatory step
-*   🟢 **Green**: Dashboard Access
-*   🟡 **Yellow**: Process
-*   🟠 **Orange**: Blockchain
-*   🔴 **Red**: Reject
-*   ⚪ **Grey**: End of project
+**Legend:** 🔵 **Blue**: Initial mandatory step • 🟢 **Green**: Dashboard Access • 🟡 **Yellow**: Process • 🟠 **Orange**: Blockchain • 🔴 **Red**: Reject • ⚪ **Grey**: End of project
 
 1.  **Community Forest (Reality)**
     ↓
