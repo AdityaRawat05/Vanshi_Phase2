@@ -1,6 +1,7 @@
 # 🌱 VANSHI
 > **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
-
+Project Domain : Governance 
+( Blockchain + Web + Open Innovation)
 ## 🔍 Why VANSHI Exists
 
 Climate action today depends heavily on forests — but the responsibility and rewards are deeply unequal.
