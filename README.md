@@ -1,5 +1,7 @@
 # 🌱 VANSHI
 > **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
+>
+> 🌐 **Live Demo:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
 
 ## 🔍 Why VANSHI Exists
 
