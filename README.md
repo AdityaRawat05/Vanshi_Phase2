@@ -1,7 +1,9 @@
 # 🌱 VANSHI
 > **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
 >
-> 🌐 **Live Demo:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
+> 🌐 **Website Link:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/)
+> 📹 **Website Explanation:** [Watch Video](https://drive.google.com/file/d/1ls4bCxMdZupINYbehvaI_Nn8mYQRhPVr/view?usp=drivesdk)
+> 📄 **Project Explanation:** [View Document](https://drive.google.com/file/d/1T4YZkm9MVB9vtZ1dL5MvTVQSlMJhKRo7/view?usp=sharing)
 
 **Project Domain:** Governance
 _(sub domains: Blockchain + Web + Open Innovation)_
