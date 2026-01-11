@@ -1,6 +1,8 @@
 # 🌱 VANSHI
 
-> **Demo Video:** [Watch Video](https://drive.google.com/file/d/1MzYgxs4N3Qy0qpLMQ8HXDCANpFYPLT1E/view?usp=drivesdk)
+> **Live Link:** [vanshi-murex.vercel.app](https://vanshi-murex.vercel.app/) <br>
+> **Demo Video:** [Watch Video](https://drive.google.com/file/d/1MzYgxs4N3Qy0qpLMQ8HXDCANpFYPLT1E/view?usp=drivesdk) <br>
+> **Project Explanation:** [View Document](https://drive.google.com/file/d/1T4YZkm9MVB9vtZ1dL5MvTVQSlMJhKRo7/view?usp=sharing)
 
 **Satellite-Verified Carbon Credit Infrastructure for Community Forests**
 
