@@ -18,16 +18,16 @@ The system eliminates greenwashing by enforcing environmental truth off-chain an
 
 [Problem Statement and Motivation](#problem-statement-and-motivation)
 
-[Key Features](#key-features)
+[Features](#features)
 
 [System Architecture](#system-architecture)
 - [Architecture Diagram](#architecture-diagram)
 
 [End-to-End System Flow](#end-to-end-system-flow)  
-- [Forest Registration Flow](forest-registration-flow)  
+- [Forest Registration Flow](#forest-registration-flow)  
 - [Satellite Verification Flow](#satellite-verification-flow)  
-- [Carbon Credit Flow](#carbon-credit-flow)  
-- [Marketplace and Credit Retirement Flow](#marketplace-and-credit-retirement-flow)
+- [Carbon Credit Calculation Flow](#carbon-credit-calculation-flow)
+- [Carbon Verification Data Flow](#carbon-verification-data-flow)
 
 [Core Components](#core-components)  
 - [Satellite & NDVI Engine](#satellite--ndvi-engine)  
@@ -35,11 +35,11 @@ The system eliminates greenwashing by enforcing environmental truth off-chain an
 - [Marketplace & Blockchain](#marketplace--blockchain)
 
 [Database Design](#database-design)  
-- [Core Entities](#71-core-entities)
+- [Core Entities](#core-entities)
 
 [Security and Authentication](#security-and-authentication)  
-- [Authentication Flow](#81-authentication-flow)  
-- [Roles](#82-roles)  
+- [Authentication Flow](#authentication-flow)
+- [Roles](#roles)
 - [Smart Contract Enforcement](#smart-contract-enforcement)
 
 [Deployment and Scaling](#deployment-and-scaling)  
@@ -47,9 +47,8 @@ The system eliminates greenwashing by enforcing environmental truth off-chain an
 - [Infrastructure](#infrastructure)
 
 [Developer Setup](#developer-setup)  
-- [Developer Setup](#developer-setup)  
-- [Quick Start](#quick-start)  
-- [Environment Variables](#1environment-variables)
+- [Quick Start](#quick-start)
+- [Environment Variables](#environment-variables)
 
 [API Endpoints](#api-endpoints)
 
@@ -57,7 +56,7 @@ The system eliminates greenwashing by enforcing environmental truth off-chain an
 
 [Monitoring & Observability](#monitoring--observability)
 
-[Documentation Files](#documentation-files)
+
 
 [Contributing](#contributing)
 
