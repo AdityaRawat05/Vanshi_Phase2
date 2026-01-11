@@ -201,6 +201,7 @@ This project is a monorepo containing the Backend (Express), Frontend (React/Vit
 - **Frontend**: [Documentation & Setup](./frontend/README.md)
 - **Contracts**: [Documentation & Setup](./contracts/README.md)
 - **GEE Service**: [Documentation & Setup](./GEE-Service/README.md)
+- **Integration Guide**: [🔗 Smart Contract Integration & Addresses](./INTEGRATION.md)
 
 ### 🔮 Future Roadmap
 - **Round-2 Improvements**: [Read the full roadmap](./README.nextRound.md)
