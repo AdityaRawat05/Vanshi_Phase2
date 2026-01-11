@@ -474,8 +474,8 @@ VANSHI scales using **three independent pipelines:**
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/vanshi
-cd vanshi
+git clone https://github.com/AdityaRawat05/Vanshi_Phase2.git
+cd Vanshi_Phase2
 
 # Backend Setup
 cd backend
@@ -612,17 +612,7 @@ k6 run tests/load-test.js
 - Metrics: Prometheus / Grafana
 - Tracing: Jaeger / Zipkin
 
----
 
-## Documentation Files
-
-- `README.md` – Project quickstart
-- `Documentation.md` – This comprehensive guide
-- `scale.txt` – Detailed scaling strategies
-- `SYSTEM_ARCHITECTURE_DIAGRAMS.md` – Architecture visualization
-- `PERFORMANCE_SCALABILITY_GUIDE.md` – Performance optimization guide
-
----
 
 ## Contributing
 
@@ -642,8 +632,7 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 
 ## Contact & Support
 
-- **Email:** support@vanshi.io
-- **Discord:** [Join our community](https://discord.gg/vanshi)
+- **Email:** ayushbutola13@gmail.com
 - **GitHub Issues:** [Report bugs or request features](https://github.com/your-org/vanshi/issues)
 
 ---
