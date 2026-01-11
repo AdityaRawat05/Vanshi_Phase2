@@ -298,7 +298,7 @@ Forests are classified using fixed thresholds:
 The NDVI engine outputs the mean NDVI value, forest density class, and polygon area, which together form the only input for carbon credit calculation. Manual modification of these values is not permitted.
 
 This design ensures verification is objective, explainable, auditable, and scalable, forming a strong anti-greenwashing foundation.
-```
+
 
 ---
 ### Carbon Accounting Engine
@@ -324,21 +324,22 @@ Credits = CO2e / 1000  (tCO2e per credit)
 
 ### Marketplace & Blockchain
 
-**Contracts:**
-- `VanshiCredit` – ERC-1155 token for carbon units
-- `VanshiMarketplace` – Trading logic (USDC ↔ Credits)
+| Contract | Purpose |
+| :--- | :--- |
+| `VanshiCredit` | ERC-1155 token for carbon units |
+| `VanshiMarketplace` | Trading logic (USDC ↔ Credits) |
 
-**Functions:**
-- ✅ Mint carbon credits after admin approval
-- ✅ Transfer credits when companies buy
-- ✅ Burn credits when companies retire
-- ✅ Query ownership and retirement history
+**Core Functions:**
+* ✅ **Mint**: Create carbon credits after admin approval
+* ✅ **Transfer**: Move credits when companies buy
+* ✅ **Burn**: Retire credits permanently
+* ✅ **Query**: Check ownership and history
 
 **Blockchain Guarantees:**
-- No double minting
-- No resale after burn
-- Public audit trail
-- Immutable retirement proof
+* **No double minting**
+* **No resale after burn**
+* **Public audit trail**
+* **Immutable retirement proof**
 
 ---
 
