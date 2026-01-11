@@ -1,95 +1,99 @@
 :root {
+  --primary-dark: #064e3b;
+  /* Deep Forest */
   --primary: #10b981;
-  --primary-dark: #059669;
-  --primary-light: #d1fae5;
-  --secondary: #1e293b;
-  --accent: #34d399;
-  --background: #f8fafc;
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --text-main: #0f172a;
-  --text-muted: #64748b;
+  /* Vibrant Leaf */
+  --primary-light: #ecfdf5;
+  /* Mint Mist */
+  --accent: #d97706;
+  /* Golden Hour */
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-cream: #fafaf9;
+  /* Warm Stone */
+  --bg-white: #ffffff;
+
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --danger: #ef4444;
   --success: #10b981;
   --warning: #f59e0b;
-  --danger: #ef4444;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--background);
-  color: var(--text-main);
-  line-height: 1.5;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow);
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-color: var(--bg-cream);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
+  color: var(--primary-dark);
   font-weight: 700;
-  color: var(--secondary);
+  line-height: 1.2;
+  margin-top: 0;
 }
 
-.card {
-  background: white;
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
-  padding: 24px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary-dark);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(6, 78, 59, 0.9), rgba(6, 78, 59, 0.7)),
+    url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }

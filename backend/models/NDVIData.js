@@ -6,6 +6,10 @@ const NDVIDataSchema = new mongoose.Schema({
   ndvi_value: { type: Number, required: true },
   forest_health: { type: String, required: true },
   confidence_score: { type: Number, required: true },
+  time_series: [{
+    month: { type: String }, // YYYY-MM
+    ndvi: { type: Number }
+  }],
   calculated_on: { type: Date, default: Date.now }
 });
 

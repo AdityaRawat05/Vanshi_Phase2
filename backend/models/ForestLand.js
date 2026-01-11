@@ -7,7 +7,11 @@ const ForestLandSchema = new mongoose.Schema({
   forest_area_ha: { type: Number, required: true },
   location: {
     latitude: { type: Number, required: true },
-    longitude: { type: Number, required: true }
+    longitude: { type: Number, required: true },
+    polygon: {
+      type: { type: String, enum: ['Polygon'], default: 'Polygon' },
+      coordinates: { type: [[[Number]]], required: false } // GeoJSON format: [[[lon, lat], ...]]
+    }
   },
   forest_type: { type: String, required: true },
   owner_user_id: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },

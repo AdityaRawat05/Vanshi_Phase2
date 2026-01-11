@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import VillageDashboard from './pages/VillageDashboard';
 import CompanyDashboard from './pages/CompanyDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import Methodology from './pages/Methodology';
 import Navbar from './components/Navbar';
 
 const PrivateRoute = ({ children, roles }) => {
@@ -23,6 +24,7 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
+                    <Route path="/methodology" element={<Methodology />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
 

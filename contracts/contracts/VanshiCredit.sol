@@ -29,6 +29,7 @@ contract VanshiCredit is AccessControl, ERC1155, ERC1155Supply, ERC1155URIStorag
     event ProjectPriceUpdated(uint256 indexed id, uint256 oldPrice, uint256 newPrice);
     event CreditsMinted(uint256 indexed id, uint256 amount);
     event CreditsRetired(address indexed account, uint256 indexed id, uint256 amount);
+    event ForestVerified(uint256 indexed forestId, string analysisHash);
 
     constructor() ERC1155("") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
@@ -112,6 +113,13 @@ contract VanshiCredit is AccessControl, ERC1155, ERC1155Supply, ERC1155URIStorag
      */
     function setURI(uint256 _id, string memory _newURI) external onlyRole(DEFAULT_ADMIN_ROLE) {
         _setURI(_id, _newURI);
+    }
+
+    /**
+     * @dev Stores the analysis hash of a verified forest. Only Admin.
+     */
+    function verifyForest(uint256 forestId, string memory analysisHash) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        emit ForestVerified(forestId, analysisHash);
     }
 
     // Overrides required by Solidity

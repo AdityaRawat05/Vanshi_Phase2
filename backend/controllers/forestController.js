@@ -10,7 +10,14 @@ exports.registerForest = async (req, res) => {
     const forest = new ForestLand({
       ...req.body,
       owner_user_id: req.user._id,
-      status: "PENDING" // Set to PENDING initially
+      status: "PENDING", // Set to PENDING initially
+      location: {
+        ...req.body.latitude && req.body.longitude ? {
+          latitude: req.body.latitude,
+          longitude: req.body.longitude,
+        } : {},
+        polygon: req.body.polygon || undefined
+      }
     });
     await forest.save();
 
@@ -44,6 +51,11 @@ exports.getForests = async (req, res) => {
       } else {
         forestObj.sales_data = { total_issued: 0, sold_credits: 0, remaining_credits: 0, revenue_earned: 0 };
       }
+
+      // Attach NDVI Data
+      const ndviData = await NDVIData.findOne({ forest_id: forest._id });
+      forestObj.ndvi_data = ndviData || null;
+
       forestsWithData.push(forestObj);
     }
 
@@ -63,13 +75,29 @@ exports.verifyForest = async (req, res) => {
     forest.status = "VERIFIED";
     await forest.save();
 
-    // Generate simulated NDVI Data
-    const ndvi_value = 0.75; // Simulated for prototype
+    // Generate simulated NDVI Data with Time Series
+    const ndvi_value = 0.75;
+    const time_series = [
+      { month: '2025-01', ndvi: 0.65 },
+      { month: '2025-02', ndvi: 0.68 },
+      { month: '2025-03', ndvi: 0.72 },
+      { month: '2025-04', ndvi: 0.75 },
+      { month: '2025-05', ndvi: 0.78 },
+      { month: '2025-06', ndvi: 0.82 },
+      { month: '2025-07', ndvi: 0.85 },
+      { month: '2025-08', ndvi: 0.80 },
+      { month: '2025-09', ndvi: 0.76 },
+      { month: '2025-10', ndvi: 0.74 },
+      { month: '2025-11', ndvi: 0.71 },
+      { month: '2025-12', ndvi: 0.69 }
+    ];
+
     const ndviData = new NDVIData({
       forest_id: forest._id,
       ndvi_value: ndvi_value,
       forest_health: getHealthStatus(ndvi_value),
-      confidence_score: 0.92
+      confidence_score: 0.92,
+      time_series: time_series
     });
     await ndviData.save();
 

@@ -54,42 +54,41 @@ const AdminDashboard = () => {
                     <p style={{ color: 'var(--text-muted)' }}>Verification & Network Governance</p>
                 </div>
                 <div style={{ display: 'flex', gap: '20px' }}>
-                    <div className="card" style={{ padding: '10px 20px', textAlign: 'center' }}>
+                    <div className="glass" style={{ padding: '15px 30px', textAlign: 'center', background: 'white' }}>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Active Credits</p>
-                        <p style={{ fontWeight: '700' }}>{Math.floor(stats.totalCredits)}</p>
+                        <p style={{ fontWeight: '700', fontSize: '1.2rem', color: 'var(--primary-dark)' }}>{Math.floor(stats.totalCredits)}</p>
                     </div>
-                    <div className="card" style={{ padding: '10px 20px', textAlign: 'center' }}>
+                    <div className="glass" style={{ padding: '15px 30px', textAlign: 'center', background: 'white' }}>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Villages Joined</p>
-                        <p style={{ fontWeight: '700' }}>{stats.villages}</p>
+                        <p style={{ fontWeight: '700', fontSize: '1.2rem', color: 'var(--primary-dark)' }}>{stats.villages}</p>
                     </div>
                 </div>
             </header>
 
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1.5fr', gap: '30px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-                    <div className="card">
-                        <h3 style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <AlertTriangle color="var(--warning)" /> Pending Verifications
+                    <div className="glass" style={{ padding: '30px', background: 'white' }}>
+                        <h3 style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <AlertTriangle color="var(--warning)" size={20} /> Pending Verifications
                         </h3>
-                        {/* ... table unchanged ... */}
                         <div style={{ overflowX: 'auto' }}>
                             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                                <thead style={{ background: '#f8fafc' }}>
+                                <thead style={{ background: 'var(--bg-cream)', borderBottom: '1px solid var(--glass-border)' }}>
                                     <tr>
-                                        <th style={{ padding: '12px', textAlign: 'left' }}>Village</th>
-                                        <th style={{ padding: '12px', textAlign: 'left' }}>Area (Ha)</th>
-                                        <th style={{ padding: '12px', textAlign: 'left' }}>Type</th>
-                                        <th style={{ padding: '12px', textAlign: 'center' }}>Action</th>
+                                        <th style={{ padding: '15px', textAlign: 'left', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Village</th>
+                                        <th style={{ padding: '15px', textAlign: 'left', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Area (Ha)</th>
+                                        <th style={{ padding: '15px', textAlign: 'left', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Type</th>
+                                        <th style={{ padding: '15px', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {forests.filter(f => f.status === 'PENDING').map(f => (
                                         <tr key={f._id} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                                            <td style={{ padding: '12px' }}>{f.village_name}</td>
-                                            <td style={{ padding: '12px' }}>{f.forest_area_ha}</td>
-                                            <td style={{ padding: '12px' }}>{f.forest_type}</td>
-                                            <td style={{ padding: '12px', textAlign: 'center' }}>
-                                                <button className="btn btn-primary" style={{ padding: '6px 12px', fontSize: '0.85rem' }} onClick={() => handleVerify(f._id)}>
+                                            <td style={{ padding: '15px', fontWeight: '500' }}>{f.village_name}</td>
+                                            <td style={{ padding: '15px' }}>{f.forest_area_ha}</td>
+                                            <td style={{ padding: '15px' }}>{f.forest_type}</td>
+                                            <td style={{ padding: '15px', textAlign: 'center' }}>
+                                                <button className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.8rem' }} onClick={() => handleVerify(f._id)}>
                                                     Verify & Issue
                                                 </button>
                                             </td>
@@ -97,7 +96,7 @@ const AdminDashboard = () => {
                                     ))}
                                     {forests.filter(f => f.status === 'PENDING').length === 0 && (
                                         <tr>
-                                            <td colSpan="4" style={{ padding: '30px', textAlign: 'center', color: 'var(--text-muted)' }}>No pending verifications</td>
+                                            <td colSpan="4" style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>No pending verifications</td>
                                         </tr>
                                     )}
                                 </tbody>
@@ -105,11 +104,11 @@ const AdminDashboard = () => {
                         </div>
                     </div>
 
-                    <div className="card">
+                    <div className="glass" style={{ padding: '30px', background: 'white' }}>
                         <h3 style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <Database color="var(--primary)" /> Global Transaction Ledger
+                            <Database color="var(--primary)" size={20} /> Global Transaction Ledger
                         </h3>
-                        <div style={{ background: '#0f172a', borderRadius: '12px', padding: '20px', color: '#94a3b8', fontFamily: 'monospace', fontSize: '0.85rem' }}>
+                        <div style={{ background: '#0f172a', borderRadius: '12px', padding: '20px', color: '#94a3b8', fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: '1.6' }}>
                             <div style={{ color: '#4ade80', marginBottom: '10px' }}>{'>'} Ledger Synchronized with Simulated Blockchain</div>
                             <div style={{ marginBottom: '5px' }}>[BLOCK: 48102] Transaction: 0x8a...2e1 Completed. 50 Credits transferred.</div>
                             <div style={{ marginBottom: '5px' }}>[BLOCK: 48103] Transaction: 0x3c...fa9 Completed. 120 Credits transferred.</div>
@@ -118,32 +117,32 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                <div className="card" style={{ height: 'fit-content' }}>
+                <div className="glass" style={{ height: 'fit-content', padding: '30px', background: 'white' }}>
                     <h3 style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <Shield color="var(--primary)" /> ESG Governance Settings
+                        <Shield color="var(--primary)" size={20} /> ESG Governance Settings
                     </h3>
 
-                    <div style={{ marginBottom: '20px' }}>
-                        <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', fontWeight: '600' }}>Carbon Price (INR per TCO2e)</label>
+                    <div style={{ marginBottom: '25px' }}>
+                        <label style={{ display: 'block', marginBottom: '10px', fontSize: '0.9rem', fontWeight: '600' }}>Carbon Price (INR per TCO2e)</label>
                         <input
                             type="number"
                             className="glass"
-                            style={{ width: '100%', padding: '12px', borderRadius: '8px' }}
+                            style={{ width: '100%', padding: '12px', borderRadius: '8px', background: 'var(--bg-cream)' }}
                             value={settings.price_per_credit}
                             onChange={(e) => setSettings({ ...settings, price_per_credit: Number(e.target.value) })}
                         />
                     </div>
 
-                    <div style={{ marginBottom: '25px' }}>
+                    <div style={{ marginBottom: '30px' }}>
                         <label style={{ display: 'block', marginBottom: '12px', fontSize: '0.9rem', fontWeight: '600' }}>Base Sequestration Rates (T/Ha)</label>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                             {['broadleaf', 'mixed', 'pine', 'degraded'].map(type => (
                                 <div key={type}>
-                                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'capitalize' }}>{type}</span>
+                                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'capitalize', display: 'block', marginBottom: '4px' }}>{type}</span>
                                     <input
                                         type="number"
                                         className="glass"
-                                        style={{ width: '100%', padding: '10px', marginTop: '5px' }}
+                                        style={{ width: '100%', padding: '10px', background: 'var(--bg-cream)' }}
                                         value={settings.base_rates[type]}
                                         onChange={(e) => setSettings({
                                             ...settings,
