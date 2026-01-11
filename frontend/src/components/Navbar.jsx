@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Leaf, LogOut, User as UserIcon } from 'lucide-react';
+import { LogOut, User as UserIcon } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const { user, logout } = useAuth();
@@ -9,7 +10,7 @@ const Navbar = () => {
         <nav className="glass" style={{ position: 'sticky', top: 0, zIndex: 1000, padding: '1rem 0' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', color: 'var(--primary-dark)', fontSize: '1.5rem', fontWeight: 'bold' }}>
-                    <Leaf size={32} />
+                    <img src={logo} alt="VANSHI Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
                     VANSHI
                 </Link>
 
