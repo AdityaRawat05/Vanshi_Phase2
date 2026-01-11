@@ -123,13 +123,13 @@ This layer includes the web interface used by village users, admins, and compani
 
 This layer contains backend services responsible for:
 
-Forest registration and validation
+   -Forest registration and validation
 
-Satellite-based NDVI computation
+   -Satellite-based NDVI computation
 
-Forest density classification
+   -Forest density classification
 
-Carbon credit calculation
+  -Carbon credit calculation
 
 All heavy computation, including satellite analysis and carbon estimation, is handled off-chain to keep the system efficient and scalable.
 
@@ -137,20 +137,20 @@ All heavy computation, including satellite analysis and carbon estimation, is ha
 
 This layer uses blockchain to enforce trust. It handles:
 
-Carbon credit minting
+  -Carbon credit minting
 
-Ownership transfers
+  -Ownership transfers
 
-Credit retirement (burning)
+  -Credit retirement (burning)
 
 Blockchain is used only where immutability and auditability are required, ensuring transparency without unnecessary cost.
 
-Off-Chain vs On-Chain Design
+Off-Chain vs On-Chain Design:
 
-Off-Chain: Satellite processing, NDVI analysis, carbon calculations, reports
+  -Off-Chain: Satellite processing, NDVI analysis, carbon calculations, reports
 
-On-Chain: Credit issuance, ownership tracking, and retirement
-
+  -On-Chain: Credit issuance, ownership tracking, and retirement
+ 
 This separation ensures VANSHI remains cost-effective, auditable, and scalable, while preventing greenwashing and double counting.
 
 ### Architecture Diagram
