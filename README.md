@@ -228,6 +228,7 @@ Guarantees:
 
 This flow converts verified forest health into carbon credits.
 
+```
 1. Verified forest density is selected
    ↓
 2. Rule-based carbon rate is applied
@@ -235,6 +236,7 @@ This flow converts verified forest health into carbon credits.
 3. Carbon credits are calculated (Area × Rate)
    ↓
 4. Credits are recorded and locked for approval
+```
 
 Guarantees:
   -No manual carbon input
