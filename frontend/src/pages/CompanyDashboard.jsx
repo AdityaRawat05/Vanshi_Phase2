@@ -62,9 +62,9 @@ const CompanyDashboard = () => {
 
     const fetchData = async () => {
         try {
-            const { data: marketData } = await axios.get('http://localhost:5000/api/carbon/marketplace');
+            const { data: marketData } = await axios.get('https://backend-seven-phi-88.vercel.app/api/carbon/marketplace');
             setMarketplace(marketData);
-            const { data: histData } = await axios.get('http://localhost:5000/api/transactions/history');
+            const { data: histData } = await axios.get('https://backend-seven-phi-88.vercel.app/api/transactions/history');
             setHistory(histData);
         } catch (err) { console.error(err); }
     };
@@ -73,7 +73,7 @@ const CompanyDashboard = () => {
 
     const handleBuy = async (carbonId, credits) => {
         try {
-            await axios.post('http://localhost:5000/api/transactions/buy', {
+            await axios.post('https://backend-seven-phi-88.vercel.app/api/transactions/buy', {
                 carbon_id: carbonId,
                 credits_to_buy: credits
             });

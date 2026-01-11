@@ -12,10 +12,10 @@ const AdminDashboard = () => {
 
     const fetchData = async () => {
         try {
-            const { data } = await axios.get('http://localhost:5000/api/forests');
+            const { data } = await axios.get('https://backend-seven-phi-88.vercel.app/api/forests');
             setForests(data);
-            const { data: market } = await axios.get('http://localhost:5000/api/carbon/marketplace');
-            const { data: globalSettings } = await axios.get('http://localhost:5000/api/admin/settings');
+            const { data: market } = await axios.get('https://backend-seven-phi-88.vercel.app/api/carbon/marketplace');
+            const { data: globalSettings } = await axios.get('https://backend-seven-phi-88.vercel.app/api/admin/settings');
 
             setSettings(globalSettings);
             setStats({
@@ -29,8 +29,8 @@ const AdminDashboard = () => {
 
     const handleVerify = async (id) => {
         try {
-            await axios.patch(`http://localhost:5000/api/forests/${id}/verify`);
-            await axios.post(`http://localhost:5000/api/carbon/${id}/activate`);
+            await axios.patch(`https://backend-seven-phi-88.vercel.app/api/forests/${id}/verify`);
+            await axios.post(`https://backend-seven-phi-88.vercel.app/api/carbon/${id}/activate`);
             alert('Forest verified and carbon asset activated!');
             fetchData();
         } catch (err) { console.error(err); }
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
 
     const handleSaveSettings = async () => {
         try {
-            await axios.post('http://localhost:5000/api/admin/settings', settings);
+            await axios.post('https://backend-seven-phi-88.vercel.app/api/admin/settings', settings);
             alert('Global ESG settings updated successfully!');
             fetchData();
         } catch (err) {

@@ -15,7 +15,7 @@ const VillageDashboard = () => {
 
     const fetchForests = async () => {
         try {
-            const { data } = await axios.get('http://localhost:5000/api/forests');
+            const { data } = await axios.get('https://backend-seven-phi-88.vercel.app/api/forests');
             setForests(data);
         } catch (err) { console.error(err); }
     };
@@ -35,7 +35,7 @@ const VillageDashboard = () => {
                 }
             }
 
-            await axios.post('http://localhost:5000/api/forests', {
+            await axios.post('https://backend-seven-phi-88.vercel.app/api/forests', {
                 ...formData,
                 location: {
                     latitude: formData.latitude,
@@ -172,7 +172,7 @@ const VillageDashboard = () => {
                                     style={{ width: '100%', justifyContent: 'center', fontSize: '0.9rem' }}
                                     onClick={async () => {
                                         try {
-                                            await axios.post(`http://localhost:5000/api/forests/${forest._id}/activate`);
+                                            await axios.post(`https://backend-seven-phi-88.vercel.app/api/forests/${forest._id}/activate`);
                                             alert('Carbon credits activated and listed on marketplace!');
                                             fetchForests();
                                         } catch (err) {
@@ -196,7 +196,7 @@ const VillageDashboard = () => {
                                 onClick={async () => {
                                     if (window.confirm('Are you sure you want to remove this forest and all its carbon credits?')) {
                                         try {
-                                            await axios.delete(`http://localhost:5000/api/forests/${forest._id}`);
+                                            await axios.delete(`https://backend-seven-phi-88.vercel.app/api/forests/${forest._id}`);
                                             fetchForests();
                                         } catch (err) {
                                             alert('Failed to remove forest');

@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
-        const { data } = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+        const { data } = await axios.post('https://backend-seven-phi-88.vercel.app/api/auth/login', { email, password });
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     const register = async (userData) => {
         console.log("SENDING REGISTER REQUEST TO:", 'http://localhost:5000/api/auth/register');
         console.log("PAYLOAD:", userData);
-        const { data } = await axios.post('http://localhost:5000/api/auth/register', userData);
+        const { data } = await axios.post('https://backend-seven-phi-88.vercel.app/api/auth/register', userData);
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
